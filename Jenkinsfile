@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    tools {nodejs "nodejs"}
+    tools {nodejs "Latest node"}
 
     stages {
         stage('Checkout branch') {
