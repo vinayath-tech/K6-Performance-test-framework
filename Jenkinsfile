@@ -1,5 +1,8 @@
 pipeline {
     agent any
+
+    tools {nodejs "nodejs"}
+
     stages {
         stage('Checkout branch') {
             steps {
@@ -13,4 +16,5 @@ pipeline {
             }
         }
     }
+
 }
