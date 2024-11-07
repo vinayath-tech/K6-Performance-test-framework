@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker { image 'node:14-alpine' args '-u root' } 
+        docker { 
+            image 'node:14-alpine' 
+            args '-u root' 
+        } 
     }
 
     tools {nodejs "Latest node"}
