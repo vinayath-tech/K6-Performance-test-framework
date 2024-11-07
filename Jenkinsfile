@@ -1,10 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'my-docker-image-with-sudo'
-            args '-u root'  // Run as root user if possible
-        }
-    }
+    agent any
 
     tools {nodejs "Latest node"}
 
