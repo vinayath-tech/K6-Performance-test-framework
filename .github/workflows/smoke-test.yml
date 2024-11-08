@@ -1,0 +1,16 @@
+name: Smoke Test Workflow
+on: [push]
+
+jobs:
+  k6_local_test:
+    name: k6 local test run - basic example
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run local k6 test
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: performance-tests/smoke-test.js
