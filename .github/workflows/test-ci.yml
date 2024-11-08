@@ -31,3 +31,17 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: performance-tests/load-test.js
+
+  k6_stress_test:
+    name: k6 stress test run - basic example
+    runs-on: ubuntu-latest
+    needs: ['k6_smoke_test', 'k6_load_test']
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Run local k6 test
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: performance-tests/stress-test.js
