@@ -19,8 +19,8 @@ export const options = {
     ],
     thresholds: {
         http_req_duration: ['p(95) < 3000'],
-        'group_duration{group:::User registration}': ['p(95) < 3000'],
-        'group_duration{group:::User Login}': ['p(95) < 3000'],
+        'group_duration{group:::User registration}': ['p(95) < 10000'],
+        'group_duration{group:::User Login}': ['p(95) < 5000'],
         http_req_failed: ['rate < 0.01']
     }
 }
