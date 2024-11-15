@@ -8,7 +8,9 @@
         "test:smoke": "npm install && k6 run ./performance-tests/smoke-test.js",
         "test:load": "npm install && k6 run ./performance-tests/load-test.js",
         "test:stress": "npm install && k6 run ./performance-tests/stress-test.js",
-        "test:cloud": "k6 cloud ./performance-tests/smoke-test.js"
+        "test:cloud-smoke": "k6 cloud ./performance-tests/smoke-test.js",
+        "test:cloud-load": "k6 cloud ./performance-tests/load-test.js",
+        "test:cloud-stress": "k6 cloud ./performance-tests/stress-test.js"
     },
     "license": "ISC",
     "dependencies": {
